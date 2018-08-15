@@ -1,0 +1,71 @@
+\documentclass[border=5mm]{standalone}
+\usepackage{tikz}
+\usetikzlibrary{cd}
+\usetikzlibrary{decorations.pathmorphing,shapes,shapes.misc}
+\begin{document}
+\begin{tikzpicture}
+\begin{scope}[every node/.style={circle,thick,draw}]
+    \node (A1) at (0,1) {$x_1$};
+    \node (A2) at (0,-1) {$x_2$};
+    \node (D) at (5.5,0) {$y$};
+\end{scope}
+\begin{scope}[every node/.style={rectangle,thick,draw=blue}]
+    \node (B) at (2,0) {$\cdot+b$};
+\end{scope}
+\begin{scope}[every node/.style={rounded rectangle,thick,draw=black!30!green}]
+    \node (C) at (3.5,0) {$\sigma$};
+\end{scope}
+\begin{scope}[>={Stealth[black]},
+              every edge/.style={draw=red,very thick}]
+    \path [->] (A1) edge node [above]{$a_1$}(B.168);
+    \path [->] (A2) edge node [above,pos=.4]{$a_2$}(B.192);
+    \path [->] (B) edge node {}(C);
+    \path [->] (C) edge node {} (D);
+\end{scope}
+\end{tikzpicture}
+\end{document}  
+
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
